@@ -14,5 +14,7 @@
 
 # 二、自定义插件
 
+- 5G Modem Script
+
 - AD Guardthome
 - OpenClash
