@@ -1,0 +1,23 @@
+
+config AdGuardHome 'AdGuardHome'
+	option httpport '3000'
+	option configpath '/etc/AdGuardHome.yaml'
+	option workdir '/tmp/AdGuardHome'
+	option logfile '/tmp/AdGuardHome.log'
+	option verbose '0'
+	option upxflag '-1'
+	
+	option waitonboot '0'
+	option update_url 'https://github.com/AdguardTeam/AdGuardHome/releases/download/${Cloud_Version}/AdGuardHome_linux_${Arch}.tar.gz'
+	option hostsmd5 '5504bb04bd01cb0e340aee9e2ae065b2'
+	option core_version 'latest'
+	option binpath '/usr/bin/AdGuardHome/AdGuardHome'
+	option version 'v0.107.32'
+	option binmtime '1686666465'
+	option enabled '1'
+	option ucitracktest '1'
+	option redirect 'exchange'
+	list old_redirect 'exchange'
+	list old_port '5335'
+	list old_enabled '1'
+
