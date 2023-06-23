@@ -16,5 +16,7 @@
 
 - 5G Modem Script
 
+- SMS Tool
+
 - AD Guardthome
 - OpenClash
