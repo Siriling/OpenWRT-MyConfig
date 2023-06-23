@@ -21,7 +21,7 @@ RNDIS拨号 > AT+QCFG="usbnet",2;AT+QCFG="usbnet",3
 NCM拨号 > AT+QCFG="usbnet",2;AT+QCFG="usbnet",5
 锁4G > AT+QNWPREFCFG="mode_pref",LTE;AT+QNWPREFCFG="mode_pref",LTE
 锁5G > AT+QNWPREFCFG="mode_pref",NR5G;AT+QNWPREFCFG="mode_pref",NR5G
-恢复自动搜索网 > AT+QNWPREFCFG="mode_pref",AUTO;AT+QNWPREFCFG="mode_pref",AUTO
+恢复自动搜索网络 > AT+QNWPREFCFG="mode_pref",AUTO;AT+QNWPREFCFG="mode_pref",AUTO
 更改模组IMEI > AT+EGMR=1,7,"IMEI";AT+EGMR=1,7,"在此设置IMEI"
 获取模组温度 > AT+QTEMP;AT+QTEMP
 切换为USB通信端口 > AT+QCFG="data_interface",0,0;AT+QCFG="data_interface",0,0
@@ -40,7 +40,7 @@ RNDIS拨号 > AT+GTUSBMODE=24;AT+GTUSBMODE=24
 NCM拨号 > AT+GTUSBMODE=23;AT+GTUSBMODE=23
 锁4G > AT+GTACT=2;AT+GTACT=2
 锁5G > AT+GTACT=14;AT+GTACT=14
-恢复自动搜索网 > AT+GTACT=20;AT+GTACT=20
+恢复自动搜索网络 > AT+GTACT=20;AT+GTACT=20
 更改模组IMEI > AT+GTSN=1,7,"IMEI";AT+GTSN=1,7,"在此设置IMEI"
 报告一次当前BBIC的温度 > AT+MTSM=1,6;AT+MTSM=1,6
 报告一次当前射频的温度 > AT+MTSM=1,7;AT+MTSM=1,7
