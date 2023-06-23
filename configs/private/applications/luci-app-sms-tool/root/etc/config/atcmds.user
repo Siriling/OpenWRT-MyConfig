@@ -3,6 +3,7 @@
 查询SIM卡状态 > AT+CPIN?;AT+CPIN?
 查询此时信号强度 > AT+CSQ;AT+CSQ
 查询网络信息 > AT+COPS?;AT+COPS?
+查询PDP信息 > AT+CGDCONT?;AT+CGDCONT?
 查询模组IMEI > AT+CGSN;AT+CGSN
 查询模组IMEI > AT+GSN;AT+GSN
 最小功能模式 > AT+CFUN=0;AT+CFUN=0
