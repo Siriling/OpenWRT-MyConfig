@@ -13,7 +13,7 @@ SIM卡状态上报 > AT+QSIMSTAT?;AT+QSIMSTAT?
 查询网络信息 > AT+QNWINFO;AT+QNWINFO
 查询载波聚合参数 > AT+QCAINFO;AT+QCAINFO
 查询当前拨号模式 > AT+QCFG="usbnet";AT+QCFG="usbnet"
-QMI/GobiNet拨号 > AT+QCFG="usbnet";AT+QCFG="usbnet"
+QMI/GobiNet拨号 > AT+QCFG="usbnet",0;AT+QCFG="usbnet",0
 ECM拨号 > AT+QCFG="usbnet",1;AT+QCFG="usbnet",1
 MBIM拨号 > AT+QCFG="usbnet",2;AT+QCFG="usbnet",2
 RNDIS拨号 > AT+QCFG="usbnet",2;AT+QCFG="usbnet",3
