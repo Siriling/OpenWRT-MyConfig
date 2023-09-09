@@ -16,8 +16,8 @@ SIM卡状态上报 > AT+QSIMSTAT?;AT+QSIMSTAT?
 QMI/GobiNet拨号 > AT+QCFG="usbnet",0;AT+QCFG="usbnet",0
 ECM拨号 > AT+QCFG="usbnet",1;AT+QCFG="usbnet",1
 MBIM拨号 > AT+QCFG="usbnet",2;AT+QCFG="usbnet",2
-RNDIS拨号 > AT+QCFG="usbnet",2;AT+QCFG="usbnet",3
-NCM拨号 > AT+QCFG="usbnet",2;AT+QCFG="usbnet",5
+RNDIS拨号 > AT+QCFG="usbnet",3;AT+QCFG="usbnet",3
+NCM拨号 > AT+QCFG="usbnet",5;AT+QCFG="usbnet",5
 锁4G > AT+QNWPREFCFG="mode_pref",LTE;AT+QNWPREFCFG="mode_pref",LTE
 锁5G > AT+QNWPREFCFG="mode_pref",NR5G;AT+QNWPREFCFG="mode_pref",NR5G
 恢复自动搜索网络 > AT+QNWPREFCFG="mode_pref",AUTO;AT+QNWPREFCFG="mode_pref",AUTO
