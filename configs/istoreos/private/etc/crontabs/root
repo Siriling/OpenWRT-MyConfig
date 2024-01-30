@@ -1,1 +1,1 @@
-* * * * * bash /root/5GModem/5g_crontab.sh
+# * * * * * bash /root/5GModem/5g_crontab.sh
