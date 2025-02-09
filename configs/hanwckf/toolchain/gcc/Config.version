@@ -29,7 +29,7 @@ config GCC_VERSION
 	default "8.4.0"		if GCC_VERSION_8
 	default "9.3.0"		if GCC_VERSION_9
 	default "10.3.0"	if GCC_VERSION_10
-	default "12.3.0"	if GCC_VERSION_12
+	default "12.2.0"	if GCC_VERSION_12
 	default "13.3.0"	if GCC_VERSION_13
 	default "11.2.0"
 
