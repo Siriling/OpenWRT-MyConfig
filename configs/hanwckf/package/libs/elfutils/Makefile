@@ -66,7 +66,12 @@ CONFIGURE_ARGS += \
 	--disable-debuginfod \
 	--without-lzma
 
-TARGET_CFLAGS += -D_GNU_SOURCE -Wno-unused-result -Wno-format-nonliteral -Wno-error
+TARGET_CFLAGS += -D_GNU_SOURCE -Wno-unused-result -Wno-format-nonliteral
+
+ifneq ($(filter $(GCC_MAJOR_VERSION),11 12 13),)
+TARGET_CFLAGS += \
+	-Wno-error=use-after-free
+endif
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
