@@ -25,7 +25,7 @@ sed -i 's/default "11.2.0"/default "11.3.0"/' MyConfig/configs/hanwckf/toolchain
 
 # 问题
 
-#### `uhttpd` 包在编译过程中遇到了代码问题
+### `uhttpd` 包在编译过程中出错
 
 > error: 'o' may be used uninitialized [-Werror=maybe-uninitialized]
 >
@@ -68,3 +68,41 @@ SET_SOURCE_FILES_PROPERTIES(ubus.c PROPERTIES COMPILE_FLAGS -Wno-error)
 ```
 
 4. 升级`uhttpd` 包
+
+### `elfutils ` 包在编译过程中出错
+
+> ebl_syscall_abi.c:37:64: error: argument 5 of type 'int *' declared as a pointer [-Werror=array-parameter=]
+>
+> ...
+>
+> ERROR: package/libs/elfutils failed to build.
+
+原因：
+
+- 函数声明与定义不一致，可能是源码或补丁的问题
+
+- 在 `ebl_syscall_abi.c` 文件中，函数 `ebl_syscall_abi` 的第 5 个参数被声明为 `int *`（指针），但在头文件 `libebl.h` 中，该参数被声明为 `int args[6]`（数组）。
+- 由于编译器选项 `-Werror` 的存在，所有警告都被视为错误，导致编译失败。
+
+解决：
+
+1. 给变量初始化
+
+- 手动修改`ebl_syscall_abi.c`文件的函数声明
+
+```c
+ebl_syscall_abi (Ebl *ebl, int *sp, int *pc, int *callno, int args[6])
+```
+
+2. 禁用 `-Werror` 选项
+
+- 在Makefile.txt文件中添加
+
+```makefile
+ifneq ($(filter $(GCC_MAJOR_VERSION),11 12 13),)
+TARGET_CFLAGS += \
+	-Wno-error=use-after-free
+endif
+```
+
+3. 升级`elfutils` 包
