@@ -200,14 +200,12 @@ define Host/SetToolchainInfo
 	$(SED) 's,GCC_VERSION=.*,GCC_VERSION=$(GCC_VERSION),' $(TOOLCHAIN_DIR)/info.mk
 endef
 
-ifeq ($(GCC_MAJOR_VERSION),11)
+ifeq ($(GCC_MAJOR_VERSION),8)
+	GCC_VERSION_FILE:=gcc/version.c
+else ifeq ($(GCC_MAJOR_VERSION),11)
 	GCC_VERSION_FILE:=gcc/version.c
 else
 	GCC_VERSION_FILE:=gcc/genversion.cc
-endif
-
-ifeq ($(GCC_MAJOR_VERSION),8)
-	GCC_VERSION_FILE:=gcc/version.c
 endif
 
 ifneq ($(GCC_PREPARE),)
