@@ -66,7 +66,7 @@ CONFIGURE_ARGS += \
 	--disable-debuginfod \
 	--without-lzma
 
-TARGET_CFLAGS += -D_GNU_SOURCE -Wno-unused-result -Wno-format-nonliteral
+TARGET_CFLAGS += -D_GNU_SOURCE -Wno-unused-result -Wno-format-nonliteral -Wno-format-nonliteral -Wno-error=use-after-free
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
